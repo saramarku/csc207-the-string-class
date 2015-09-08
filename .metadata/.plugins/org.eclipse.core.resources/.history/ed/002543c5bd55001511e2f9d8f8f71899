@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+
+public class ForgivingPrompt {
+public static boolean forgivingPrompt (String question){
+	
+	
+	System.out.println(question);
+	Scanner in = new Scanner(System.in);
+	String answer = in.nextLine();
+
+	
+	if(answer.equals("y") || answer.equals("yes") || answer.equals("yep") 
+	|| answer.equals("Y") || answer.equals("Yes") || answer.equals("Yep") )
+	{
+		return true;
+	}
+	if(answer.equals("n") || answer.equals("no") || answer.equals("nope") 
+			|| answer.equals("N") || answer.equals("No") || answer.equals("Nope") )
+	{
+		return false;
+	}
+	else
+		forgivingPrompt(question);
+}
+
+	public static void main(String[] args) {
+		String question =  "Do you like CSC207?";
+forgivingPrompt(question);
+
+	}
+
+}
